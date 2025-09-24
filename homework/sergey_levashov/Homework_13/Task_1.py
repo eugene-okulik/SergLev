@@ -1,6 +1,8 @@
+import os
 from datetime import datetime, timedelta
 
-file_path = '../../eugene_okulik/hw_13/data.txt'
+current_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(current_dir, '..', '..', 'eugene_okulik', 'hw_13', 'data.txt')
 
 with open(file_path, 'r', encoding='utf-8') as file:
     for line in file:
