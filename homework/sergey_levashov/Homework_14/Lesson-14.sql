@@ -1,13 +1,13 @@
 -- 1. создаю студента
 INSERT INTO students (name, second_name, group_id)
-VALUES ('SERG', 'AQA', 2);
+VALUES ('SERG2', 'AQA2', NULL);
 
--- посмотреть созданого студента и взять его id = 21508
+-- посмотреть созданного студента и взять его id
 SELECT *
 FROM students
 WHERE name like 'SERG'
 
--- 2. создать книги и указать что студент SERG (id = 21508) взял их
+-- 2. создать книги и указать что студент SERG взял их
 INSERT INTO books (title, taken_by_student_id)
 VALUES 
   ('Математика для чайников', 21508),
