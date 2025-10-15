@@ -68,7 +68,7 @@ db.commit()
 
 # Получение ID предметов
 cursor.execute("""
-    SELECT * FROM subjects 
+    SELECT * FROM subjects
     WHERE title IN ('Обучение автоматизации Python', 'Обучение SQL')
 """)
 subjects_data = cursor.fetchall()
@@ -90,7 +90,7 @@ db.commit()
 
 # Получение ID занятий
 cursor.execute("""
-    SELECT * FROM lessons 
+    SELECT * FROM lessons
     WHERE subject_id IN (%s, %s)
 """ % (subject_ids['Обучение автоматизации Python'], subject_ids['Обучение SQL']))
 lessons_data = cursor.fetchall()
@@ -129,7 +129,7 @@ print("Книги студента:", cursor.fetchall())
 
 # Полная информация о студенте
 cursor.execute("""
-    SELECT 
+    SELECT
         s.name,
         s.second_name,
         g.title AS group_title,
